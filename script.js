@@ -27,9 +27,7 @@ let makeAllCaps = (array) => {
 };  
 
 let sortWords = (array) => {
-    array.sort().forEach(e => {
-        console.log(e);
-    });
+    return array.sort()
 };
 
 function promiseArray(array){
@@ -44,10 +42,10 @@ function promiseArray(array){
 
 promiseArray(arrayOfWords)
 .then(result => makeAllCaps(result))
-.then(result => sortWords(result))
+.then(result => console.log(sortWords(result)))
 .catch(err => console.log(err));
 
 promiseArray(complicatedArray)
 .then(result => makeAllCaps(result))
-.then(result => sortWords(result))
+.then(result => console.log(sortWords(result)))
 .catch(err => console.log(err));
